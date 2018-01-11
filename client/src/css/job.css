@@ -1,0 +1,35 @@
+.job-box {
+  margin: 2em;
+  overflow: hidden; }
+  .job-box .job-title {
+    color: red; }
+  .job-box button {
+    margin: 10px auto; }
+  .job-box .job-body p {
+    margin: 0; }
+
+.event {
+  display: flex;
+  flex-direction: column; }
+  .event .buttonGroup {
+    margin-bottom: 15px; }
+  .event .jobList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .event .jobList .eventItem {
+      margin: 10px; }
+      .event .jobList .eventItem .jobCard {
+        transition: all 0.3s;
+        opacity: 0.75;
+        width: 325px;
+        height: 197px;
+        background-color: #e6e6e8;
+        border-radius: 10px; }
+      .event .jobList .eventItem .fa {
+        font-size: 1.5em; }
+    .event .jobList .eventItem:hover .jobCard {
+      opacity: 1;
+      width: 332px;
+      height: 204px; }

@@ -1,0 +1,84 @@
+.cityChatContainer {
+  display: flex; }
+  .cityChatContainer .sidebarWrapper {
+    border-top: 1px solid lightgrey;
+    position: absolute;
+    top: 272px;
+    left: 0;
+    bottom: 49px;
+    width: 25%;
+    padding: 0;
+    margin: 0; }
+    .cityChatContainer .sidebarWrapper .chatSidebar {
+      overflow-y: scroll;
+      border-right: solid lightgrey 1px;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      flex-direction: column;
+      height: calc(100% - 272px - 49px);
+      width: 25%; }
+      .cityChatContainer .sidebarWrapper .chatSidebar h4 {
+        margin-top: 20px;
+        margin-bottom: 20px; }
+      .cityChatContainer .sidebarWrapper .chatSidebar .chatConnectionsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px; }
+        .cityChatContainer .sidebarWrapper .chatSidebar .chatConnectionsContainer .connectionImage {
+          height: 50px;
+          width: 50px; }
+          .cityChatContainer .sidebarWrapper .chatSidebar .chatConnectionsContainer .connectionImage img {
+            max-width: 100%;
+            max-width: 100%;
+            border-radius: 50%; }
+        .cityChatContainer .sidebarWrapper .chatSidebar .chatConnectionsContainer .connectionName {
+          margin: 2px 0;
+          font-weight: 700;
+          color: black;
+          text-align: center; }
+  .cityChatContainer .cityChatWrapper {
+    border-top: 1px solid lightgrey;
+    position: absolute;
+    top: 272px;
+    right: 0;
+    bottom: 49px;
+    width: 75%;
+    padding: 0;
+    margin: 0; }
+    .cityChatContainer .cityChatWrapper .cityChat {
+      position: fixed;
+      height: calc(100% - 272px - 49px);
+      width: 75%;
+      overflow-y: scroll; }
+      .cityChatContainer .cityChatWrapper .cityChat .chatMessage {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px; }
+
+.chatMessageContainer {
+  overflow-y: scroll;
+  display: flex;
+  margin: 5px 0; }
+  .chatMessageContainer .chatUserImage {
+    height: 50px;
+    width: 50px;
+    margin-right: 5px; }
+    .chatMessageContainer .chatUserImage img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 5px; }
+  .chatMessageContainer .messageContent .username {
+    font-weight: 700; }
+
+.inputBar {
+  padding: 5px;
+  background: lightblue;
+  border-top: 1px solid black;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  right: 0; }

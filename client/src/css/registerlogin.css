@@ -1,0 +1,18 @@
+h2.form-title {
+  margin-top: 40px;
+  color: black; }
+
+.registerForm, .loginForm {
+  max-width: 900px;
+  border-radius: 4px;
+  padding: 30px 20px 0 20px;
+  margin-bottom: 40px; }
+  .registerForm .btn, .loginForm .btn {
+    width: 150px;
+    height: 40px;
+    margin-top: 10px; }
+
+.orRegister {
+  text-align: center;
+  color: red;
+  font-size: 15px; }

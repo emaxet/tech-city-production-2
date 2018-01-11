@@ -1,0 +1,92 @@
+  .event {
+  text-align: center;
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  height: 100%;
+  overflow: hidden;
+  .buttonGroup{
+    .chatSearchIcon {
+      margin: 0 5px;
+      font-size: 35px;
+      color: lightblue;
+      position: relative;
+      top: 6px;
+    }
+    .chatSearchIcon:hover {
+      cursor: pointer;
+    }
+    .chatSearch {
+      margin-top: 10px;
+    }
+    button{
+      margin: 0 10px;
+    }
+  }
+  .eventNav {
+    border-collapse: collapse;
+    table {
+      margin: 1em 0;
+      text-align: left;
+      width: 100%;
+      border: 5px solid lightblue;
+    }
+    tr:nth-child(even) {
+      background-color: #9cd0f3;
+    }
+    tr:hover {
+      background-color: rgb(147, 189, 245);
+    }
+    th {
+      border: 1px solid #0d628a;
+      padding: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #9cd0f3;
+      color: white;
+    }
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+  }
+  .eventList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .eventItem {
+      padding: 2em;
+      .eventCard {
+        transition: all 0.3s;
+        opacity: 0.75;
+        width: 380px;
+        height: 355px;
+      }
+    }
+    .eventItem:hover .eventCard {
+        opacity: 1;
+        width: 400px;
+        height: 360px;
+    }
+    .fa {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .event {
+    padding: 0 5em;
+    .eventItem {
+      display: block;
+    }
+  }
+}
+
+
+.eventItem:hover {
+  cursor: pointer;
+}
+

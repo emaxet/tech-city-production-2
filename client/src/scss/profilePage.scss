@@ -1,0 +1,14 @@
+.profile-div {
+  margin-top: 100px;
+  .col-md-3 {
+    overflow: hidden;
+    img {
+      border-radius: 50%;
+      height: 200px;
+      margin: 10px 0;
+    }
+  }
+  .bio-label {
+    width: 150px;
+  }
+}

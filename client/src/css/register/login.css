@@ -1,0 +1,14 @@
+.registerTitle, .loginForm {
+  margin: 2%;
+  font-size: 2.5em; }
+
+.registerForm, .loginForm {
+  max-width: 900px;
+  border: 2px solid black;
+  padding: 30px 20px 0 20px; }
+  .registerForm .form-text, .loginForm .form-text {
+    color: red; }
+  .registerForm .btn, .loginForm .btn {
+    width: 150px;
+    height: 40px;
+    margin-top: 10px; }

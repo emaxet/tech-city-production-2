@@ -1,0 +1,40 @@
+.chatNav {
+	display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  button {
+  	margin: 0 3px;
+  }
+  .chatSearchIcon {
+    margin: 0 5px;
+    font-size: 35px;
+    color: lightblue;
+  }
+  .chatSearchIcon:hover {
+    cursor: pointer;
+  }
+}
+
+.chatSearchBox {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  .chatSearch {
+    height: 40px;
+  }
+}
+
+.chatList {
+  display: inline-flex;
+  flex-direction: column;
+  .btn {
+    margin: 15px;
+    border: none;
+    .chatTitle {
+      font-weight: 600;
+      font-size: 1.6em;
+      margin: 0;
+    }
+  }
+}

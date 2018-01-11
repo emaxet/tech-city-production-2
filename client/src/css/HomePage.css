@@ -1,0 +1,105 @@
+a, a:hover {
+  text-decoration: none !important; }
+
+.form-error {
+  color: red; }
+
+.main-nav {
+  padding: 0 40px;
+  font-size: 1.1em;
+  background: white;
+  height: 55px; }
+  .main-nav a.navbar-word {
+    padding: 8px 14px 8px;
+    margin: 5px 2px;
+    font-size: 16px;
+    color: black;
+    position: relative;
+    font-weight: 600;
+    border-radius: 3px; }
+  .main-nav a.navbar-word:hover {
+    background-color: #37a4e7;
+    color: #fff !important;
+    text-decoration: none; }
+  .main-nav .dropdown-item a {
+    color: black; }
+  .main-nav .active {
+    background: #37a4e7;
+    color: #fff !important;
+    text-decoration: none; }
+  .main-nav .nav-pic {
+    height: 40px;
+    border-radius: 100%;
+    margin: 5px 5px; }
+
+#home-header {
+  z-index: 1;
+  height: 70vh;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0; }
+  #home-header video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover; }
+  #home-header .header-text {
+    font-family: 'Share Tech', sans-serif;
+    z-index: 2;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+    #home-header .header-text #header-title {
+      font-size: 10em;
+      color: white; }
+    #home-header .header-text #header-tagline {
+      font-size: 1.2em;
+      color: #ffb8b8; }
+
+#cities-list {
+  max-width: 1200px; }
+
+.city-box {
+  display: inline-block;
+  width: 350px;
+  height: 250px;
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px; }
+  .city-box img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 5px; }
+  .city-box .city-text {
+    background-color: black;
+    color: white;
+    opacity: 0.75;
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    transform: translate(0, 32%);
+    transition: all ease 0.5s;
+    border-radius: 5px; }
+  .city-box .city-info span {
+    margin: 0 10px; }
+
+.city-box:hover .city-text {
+  transform: translate(0); }
+
+@media (max-width: 809px) {
+  #cities-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column; } }

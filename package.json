@@ -1,0 +1,35 @@
+{
+  "name": "tech-city",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "knex": "./node_modules/.bin/knex",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/app.js",
+    "client": "cd client && npm start"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "~1.18.2",
+    "bootstrap": "^4.0.0-beta.2",
+    "concurrently": "^3.5.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^4.0.0",
+    "express": "~4.15.5",
+    "express-passport-logout": "^0.1.0",
+    "express-session": "^1.15.6",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.1.0",
+    "knex": "^0.14.2",
+    "morgan": "~1.9.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.0",
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.0.4",
+    "validator": "^9.2.0"
+  }
+}
