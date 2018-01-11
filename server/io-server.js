@@ -12,6 +12,8 @@ module.exports =  {
 		const server = require('http').createServer(app);
 		server.listen(8080, () => console.log('Chat server running on port 8080...'))
 		const io = require('socket.io').listen(server);
+		io.set('transports', ['xhr-polling']);
+		io.set('polling duration', 10);
 		let connections = [];
 
 		io.on('connection', function(socket){
