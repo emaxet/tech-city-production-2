@@ -28,7 +28,7 @@ class ChatList extends Component {
 	}
 
 	fetchApiChats() {
-		axios.get(`http://localhost:3000/api/v1/${this.state.cityName}/chats`)
+		axios.get(`/api/v1/${this.state.cityName}/chats`)
 		.then((res) => {
 			this.setState ({
 				'chats': res.data
@@ -46,7 +46,7 @@ class ChatList extends Component {
   	}
 
   	listMyChats() {
-  		axios.get(`http://localhost:3000/api/v1/users/${this.props.userId.sub}/chats/${this.state.cityName}`)
+  		axios.get(`/api/v1/users/${this.props.userId.sub}/chats/${this.state.cityName}`)
   		.then((res) => {
   			this.setState ({
   				'chats': res.data,
@@ -70,7 +70,7 @@ class ChatList extends Component {
 
   	submitQuery(e) {
   		let query = e.target.value;
-  		axios.get(`http://localhost:3000/api/v1/Vancouver/chats/search/${query}`)
+  		axios.get(`/api/v1/Vancouver/chats/search/${query}`)
   		.then((res) => {
   			this.setState ({
   				'chats': res.data,

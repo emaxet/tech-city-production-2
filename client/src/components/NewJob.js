@@ -29,7 +29,7 @@ class NewJob extends Component{
 
   toggleSubmit(){
     if(this.isValid()){
-      axios.post(`http://localhost:3000/api/v1/${this.state.cityName}/jobs`, {
+      axios.post(`/api/v1/${this.state.cityName}/jobs`, {
         company: this.state.company,
         title: this.state.title,
         url: this.state.url,

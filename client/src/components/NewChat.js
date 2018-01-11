@@ -16,7 +16,7 @@ class NewChat extends Component {
 	}
 
 	submitForm() {
-		axios.post(`http://localhost:3000/api/v1/${this.props.cityName}/chats`, {
+		axios.post(`/api/v1/${this.props.cityName}/chats`, {
 			'userId': this.props.userId.sub || null,
 			'name': this.state.name,
 			'subject': this.state.subject

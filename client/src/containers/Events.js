@@ -50,7 +50,7 @@ class Events extends Component {
 
   submitQuery(e) {
     let query = e.target.value;
-      axios.get(`http://localhost:3000/api/v1/Vancouver/events/search/${query}`)
+      axios.get(`/api/v1/Vancouver/events/search/${query}`)
       .then((res) => {
         this.setState ({
           'eventlist': res.data
@@ -71,7 +71,7 @@ class Events extends Component {
   }
 
   updateApiEvents(){
-    axios.get(`http://localhost:3000/api/v1/${this.state.cityName}/events`)
+    axios.get(`/api/v1/${this.state.cityName}/events`)
       .then((res) => {
         this.setState({
           'eventlist': res.data

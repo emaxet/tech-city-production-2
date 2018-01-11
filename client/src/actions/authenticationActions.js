@@ -12,7 +12,7 @@ export function setCurrentUser(user) {
 
 export function userRegistration(payload) {
   return dispatch => {
-    return axios.post("http://localhost:3000/session/register", payload).then(res => {
+    return axios.post("/session/register", payload).then(res => {
       const token = res.data.token;
       localStorage.setItem('jwtToken', token);
       setAuthorizationToken(token);

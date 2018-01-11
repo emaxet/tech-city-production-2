@@ -13,7 +13,7 @@ class Chat extends Component {
     super(props);
     this.state = {
       chatId: this.props.location.pathname.split('/')[4],
-      socket: io('http://localhost:8080', {query: `chatId=${this.props.location.pathname.split('/')[4]}&username=${this.props.username}&userImage=${this.props.userImage}`}),
+      socket: io('https://techcity.herokuapp.com:8080', {query: `chatId=${this.props.location.pathname.split('/')[4]}&username=${this.props.username}&userImage=${this.props.userImage}`}),
       connections: [],
       messages: [],
       newMessage: '',
@@ -48,7 +48,7 @@ class Chat extends Component {
   }
 
   fetchApiMessages() {
-    axios.get(`http://localhost:3000/api/v1/${this.state.cityName}/chats/${this.state.chatId}`)
+    axios.get(`/api/v1/${this.state.cityName}/chats/${this.state.chatId}`)
     .then((res) => {
       this.setState ({
         'messages': res.data,

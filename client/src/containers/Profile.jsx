@@ -14,7 +14,7 @@ class Profile extends Component {
 
 	 componentDidMount() {
     var self = this;
-    axios.get(`http://localhost:3000/api/v1/users/${this.props.match.params.username}`).then(function (response) {
+    axios.get(`/api/v1/users/${this.props.match.params.username}`).then(function (response) {
 			self.setState({user: response.data[0]});
     })
   }

@@ -45,7 +45,7 @@ class NewEvent extends Component{
 
   submitForm(){
     if(this.isValid()){
-      axios.post(`http://localhost:3000/api/v1/${this.state.cityName}/events`, {
+      axios.post(`/api/v1/${this.state.cityName}/events`, {
         'creator_id' : this.state.creatorId,
         'type_id'    : this.state.typeId,
         'city_id'    : this.props.cityId,

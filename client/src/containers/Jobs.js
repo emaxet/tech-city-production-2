@@ -26,7 +26,7 @@ class Jobs extends Component {
   }
 
   updateJobsFromAPI() {
-    axios.get(`http://localhost:3000/api/v1/${this.state.cityName}/jobs`)
+    axios.get(`/api/v1/${this.state.cityName}/jobs`)
       .then((res) => {
         this.setState({
           'jobs': res.data
@@ -59,7 +59,7 @@ class Jobs extends Component {
 
   submitQuery(e) {
     let query = e.target.value;
-      axios.get(`http://localhost:3000/api/v1/Vancouver/jobs/search/${query}`)
+      axios.get(`/api/v1/Vancouver/jobs/search/${query}`)
       .then((res) => {
         this.setState ({
           'jobs': res.data

@@ -58,7 +58,7 @@ class JobBox extends Component{
   }
 
   trashClick(){
-    axios.delete(`http://localhost:3000/api/v1/${this.props.name}/jobs/${this.props.id}`)
+    axios.delete(`/api/v1/${this.props.name}/jobs/${this.props.id}`)
     .then(() => {
       this.props.updateJobsFromAPI();
     })
