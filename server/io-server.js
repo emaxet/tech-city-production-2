@@ -9,7 +9,7 @@ module.exports =  {
 
 		// SETTING UP SOCKET.IO SERVER
 
-		const server = require('https').createServer(sslOptions, app);
+		const server = require('https').createServer(app);
 		server.listen(8080, () => console.log('Chat server running on port 8080...'))
 		const io = require('socket.io').listen(server);
 		io.set('transports', ['xhr-polling']);

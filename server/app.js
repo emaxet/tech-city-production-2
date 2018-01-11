@@ -12,14 +12,10 @@ const passport     = require('passport');
 const session      = require('express-session');
 const bodyParser   = require('body-parser');
 const ioServer     = require('./io-server');
-const sslOptions   = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
-};
 
 // INITIALIZE SOCKET.IO SERVER ON PORT 8080
 
-ioServer.ioInit(knex, sslOptions);
+ioServer.ioInit(knex);
 
 // DEFINE AUTH ROUTERS
 
