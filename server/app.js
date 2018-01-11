@@ -1,6 +1,5 @@
 const ENV = process.env.ENV || "development";
 
-
 const express      = require('express');
 const app          = express();
 const path         = require('path');
