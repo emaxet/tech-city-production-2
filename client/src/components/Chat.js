@@ -13,7 +13,7 @@ class Chat extends Component {
     super(props);
     this.state = {
       chatId: this.props.location.pathname.split('/')[4],
-      socket: io('https://techcity.herokuapp.com:8080', {query: `chatId=${this.props.location.pathname.split('/')[4]}&username=${this.props.username}&userImage=${this.props.userImage}`}),
+      socket: io('/', {secure: true, query: `chatId=${this.props.location.pathname.split('/')[4]}&username=${this.props.username}&userImage=${this.props.userImage}`}),
       connections: [],
       messages: [],
       newMessage: '',

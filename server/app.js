@@ -12,10 +12,13 @@ const passport     = require('passport');
 const session      = require('express-session');
 const bodyParser   = require('body-parser');
 const ioServer     = require('./io-server');
+const server       = require('http').Server(app).listen(5000);
+const chatHelpers  = require('./routes/api/lib/chat-helpers');
+
 
 // INITIALIZE SOCKET.IO SERVER ON PORT 8080
 
-ioServer.ioInit(knex);
+ioServer.ioInit(knex, server);
 
 // DEFINE AUTH ROUTERS
 
@@ -102,8 +105,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(app.get('port'), () => {
-  console.log(`Find the server at port ${app.get('port')}/`); // eslint-disable-line no-console
-});
+// app.listen(app.get('port'), () => {
+//   console.log(`Find the server at port ${app.get('port')}/`); // eslint-disable-line no-console
+// });
 
 
