@@ -64,9 +64,6 @@ app.use(express.static(path.join(__dirname, '../client', 'build')));
 
 // MOUNT API ROUTES (NO AUTH REQUIRED)
 
-app.get('/', function (req, res) {
-   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
 app.use('/session', auth(knex, passport));
 app.use('/api/v1', cities(knex));
 app.use('/api/v1', users(knex));
@@ -76,7 +73,7 @@ app.use('/api/v1', chatsNoAuth(knex));
 
 // API AUTHENTICATION MIDDLEWARE
 
-app.use('*', apiAuth());
+// app.use('*', apiAuth());
 
 // MOUNT API ROUTES (AUTH REQUIRED)
 
@@ -84,6 +81,10 @@ app.use('/api/v1', events(knex));
 app.use('/api/v1', jobs(knex));
 app.use('/api/v1', cities(knex));
 app.use('/api/v1', chats(knex));
+
+app.get('*', function (req, res) {
+   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
