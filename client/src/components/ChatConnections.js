@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class ChatConnections extends Component{
   
   render() {
-    console.log(this.props);
     return (
       <div className="chatConnectionsContainer">
           <div className="connectionImage">
