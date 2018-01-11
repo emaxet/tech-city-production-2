@@ -18,7 +18,7 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     var self = this;
-    axios.get('http://localhost:3000/api/v1/cities').then(function (response) {
+    axios.get('/api/v1/cities').then(function (response) {
       self.setState({cities: response.data});
     });
   }
