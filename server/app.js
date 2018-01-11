@@ -12,10 +12,14 @@ const passport     = require('passport');
 const session      = require('express-session');
 const bodyParser   = require('body-parser');
 const ioServer     = require('./io-server');
+const sslOptions   = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
 
 // INITIALIZE SOCKET.IO SERVER ON PORT 8080
 
-ioServer.ioInit(knex);
+ioServer.ioInit(knex, sslOptions);
 
 // DEFINE AUTH ROUTERS
 
@@ -24,15 +28,15 @@ const apiAuth = require('./routes/auth/api-authentication');
 
 // DEFINE API ROUTERS
 
-const index  = require('./routes/api/index');
-const users  = require('./routes/api/users');
-const events = require('./routes/api/events');
+const index        = require('./routes/api/index');
+const users        = require('./routes/api/users');
+const events       = require('./routes/api/events');
 const eventsNoAuth = require('./routes/api/eventsNoAuth');
-const jobs   = require('./routes/api/jobs');
-const jobsNoAuth = require('./routes/api/jobsNoAuth');
-const cities = require('./routes/api/cities');
-const chats  = require('./routes/api/chats');
-const chatsNoAuth = require('./routes/api/chatsNoAuth');
+const jobs         = require('./routes/api/jobs');
+const jobsNoAuth   = require('./routes/api/jobsNoAuth');
+const cities       = require('./routes/api/cities');
+const chats        = require('./routes/api/chats');
+const chatsNoAuth  = require('./routes/api/chatsNoAuth');
 
 // SET API SERVER PORT
 

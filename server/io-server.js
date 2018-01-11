@@ -4,16 +4,17 @@ const chatHelpers  = require('./routes/api/lib/chat-helpers');
 
 module.exports =  {
 
-	ioInit: (knex) => {
+	ioInit: (knex, sslOptions) => {
 		app.use(express.static('../client/public'));
 
 		// SETTING UP SOCKET.IO SERVER
 
-		const server = require('http').createServer(app);
+		const server = require('https').createServer(sslOptions, app);
 		server.listen(8080, () => console.log('Chat server running on port 8080...'))
 		const io = require('socket.io').listen(server);
 		io.set('transports', ['xhr-polling']);
 		io.set('polling duration', 10);
+
 		let connections = [];
 
 		io.on('connection', function(socket){
