@@ -10,7 +10,7 @@ module.exports =  {
 		// SETTING UP SOCKET.IO SERVER
 
 		const server = require('http').createServer(app);
-		server.listen(8080, () => console.log('Chat server running on port 8080...'))
+		server.listen(3000, () => console.log('Chat server running on port 3000...'))
 		const io = require('socket.io').listen(server);
 		io.set('transports', ['xhr-polling']);
 		io.set('polling duration', 10);
