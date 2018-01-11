@@ -125,7 +125,7 @@ class Eventlist extends Component {
       <Card className="eventCard">
         <div onClick={this.setmodal}>
         <CardMedia
-          style={{height: 180}}
+          style={{height: 180, backgroundSize: 'contain'}}
           image={this.props.image}
         />
         <CardContent style={{height: 120}}>
